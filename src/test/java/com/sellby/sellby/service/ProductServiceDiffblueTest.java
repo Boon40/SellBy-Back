@@ -36,7 +36,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@ContextConfiguration(classes = {ProductService.class})
+//@ContextConfiguration(classes = {ProductService.class})
 @ExtendWith(MockitoExtension.class)
 class ProductServiceDiffblueTest {
     @Mock
