@@ -1,0 +1,229 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: lightgray;
+}
+
+/* NAVIGATION BAR */
+
+nav{
+    background-color: #F4C2C2;
+    height: 80px;
+    width: 100%;
+}
+
+.nav-icon{
+    color: black;
+}
+
+label.nav-logo{
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin: 0;
+    padding: 20px 20px;
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    text-align: center;
+    display: block;
+    padding: 0 10px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+nav ul li:last-child{
+    border-right: none;
+}
+
+ul li a .nav-icon{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+ul li a .nav-icon .fa{
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 34px;
+    transition: 0.5s;
+    color: #000;
+}
+
+ul li a .nav-icon .fa:last-child{
+    color: #e91e63;
+}
+
+ul li a:hover .nav-icon .fa{
+    transform: translateY(-100%);
+}
+
+.checkbtn{
+    font-size: 40px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+}
+
+@media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    nav ul{
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        top: 150px;
+        margin-left: 42.5%;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    ul li a .nav-icon{
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        height: 60px;
+        padding-top: 20px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        display: block;
+        border: none;
+    }
+
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+/* BOX FOR CATEGORIES AND PRODUCTS */
+
+.box{
+    display: flex;
+    margin-top: 50px;
+}
+
+/* CATEGORIES BOX */
+
+.categories-box{
+    width: 25%;
+    height: 700px;
+    margin-top: 20px;
+    background-color: #F4C2C2;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    box-shadow: -20px 10px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+.categories-box a{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* PRODUCTS BOX */
+
+.product-box{
+    width: 70%;
+    height: 700px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.small-product-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1206px;
+    width: 100%;
+}
+
+.product-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-box i{
+    margin-top: 200px;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card{
+    width: 250px;
+    height: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    background-color: #F4C2C2;
+    box-shadow: -20px 30px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.swiper-slide{
+    max-width: 250px;
+    max-height: 300px;
+}
+
+.product-card img{
+    width: 100%;
+    height: 70%;
+}
+
+.product-card i{
+    position: absolute;
+    margin: 5px;
+}
+
+.product-card a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.title{
+    margin-left: 10px;
+}
+
+.product-card .price{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
