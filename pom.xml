@@ -49,12 +49,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>1.1</version>
-		</dependency>
-
 		<!-- MySQL Connector (or the database driver you are using) -->
 		<dependency>
 			<groupId>com.mysql</groupId>
