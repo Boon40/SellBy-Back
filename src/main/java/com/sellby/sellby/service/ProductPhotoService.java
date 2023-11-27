@@ -12,7 +12,12 @@ import com.sellby.sellby.repository.ProductPhotoRepository;
 import com.sellby.sellby.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,6 +52,22 @@ public class ProductPhotoService {
         final var savedProductPhoto = productPhotoRepository.save(productPhoto);
 
         return productPhotoMapper.toResponse(savedProductPhoto);
+    }
+
+    public void addProductPhoto(MultipartFile photo, int id) throws Exception{
+        String uploadDir = "src/main/resources/static/images";
+        String originalFilename = photo.getOriginalFilename();
+        int lastIndex = originalFilename.lastIndexOf('.');
+        String type = "";
+        if (lastIndex >= 0 && lastIndex < originalFilename.length() - 1){
+            type = originalFilename.substring(lastIndex);
+        }
+        String date = java.time.LocalDateTime.now().toString().replace(":", "-").replace(".", "-");
+        String fileName = id + "-" + date + type;
+        Path path = Paths.get(uploadDir + "/" + fileName);
+        Files.copy(photo.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
+        ProductPhotoRequest product = new ProductPhotoRequest(path.toString(), id);
+        this.addProductPhoto(product);
     }
 
     public void deleteProductPhoto(int id){

@@ -9,8 +9,13 @@ import com.sellby.sellby.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 @RestController
@@ -30,13 +35,19 @@ public class ProductPhotoController {
     }
 
     @PostMapping
-    public ResponseEntity<ProductPhotoResponse> addProductPhoto(
-            @RequestBody @Valid ProductPhotoRequest request
+    public String addProductPhotos(
+            @RequestParam("image") MultipartFile photo,
+            @RequestParam("id") int id
     ) {
         try {
-            return ResponseEntity.ok(productPhotoService.addProductPhoto(request));
+            if (photo.isEmpty()){
+                return "No photos selected";
+            }
+            productPhotoService.addProductPhoto(photo, id);
+            return "Photo uploaded successfully";
         }catch (Exception e){
-            return ResponseEntity.badRequest().build();
+            e.printStackTrace();
+            return "Error uploading the photo";
         }
     }
 
