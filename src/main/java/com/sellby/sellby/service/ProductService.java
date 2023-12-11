@@ -19,6 +19,9 @@ import java.util.Optional;
 public class ProductService {
     private final ProductRepository productRepository;
     private final ProductMapper productMapper;
+    private final UserService userService;
+    private final StateService stateService;
+    private final CategoryService categoryService;
 
     public List<ProductResponse> getAllProducts(){
         return((List<Product>) productRepository.findAll())
@@ -38,7 +41,13 @@ public class ProductService {
     }
 
     public ProductResponse addProduct(ProductRequest request){
-        final var product = productMapper.toEntity(request);
+        final var product = productMapper.toEntity(
+                request,
+                userService.getUserById(request.getSellerId()),
+                stateService.getStateById(request.getStateId()),
+                categoryService.getCategoryById(request.getCategoryId())
+        );
+
         final var savedProduct = productRepository.save(product);
 
         return productMapper.toResponse(savedProduct);

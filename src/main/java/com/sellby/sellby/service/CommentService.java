@@ -28,6 +28,7 @@ public class CommentService {
     private final CommentRepository commentRepository;
     private final UserRepository userRepository;
     private final CommentMapper commentMapper;
+    private final UserService userService;
 
     public List<CommentResponse> getAllComments(){
         return((List<Comment>) commentRepository.findAll())
@@ -43,23 +44,14 @@ public class CommentService {
                 .toList();
     }
 
-    public float getAverageUserRating(int id){
-        List<Comment> comments = commentRepository.getUserComments(userRepository.findById((long) id).orElseThrow());
-        float ratingsSum = 0;
-        for (Comment comment : comments){
-            ratingsSum += comment.getRating();
-        }
-        return ratingsSum/comments.size();
-    }
-
     public Comment getCommentById(int id){
         Optional<Comment> comment = commentRepository.findById((long) id);
-        return comment.orElse(null);
+        return comment.orElseThrow();
     }
 
     public CommentResponse addComment(CommentRequest request){
         //request.setCreatedDate(LocalDate.now());
-        final var comment = commentMapper.toEntity(request);
+        final var comment = commentMapper.toEntity(request, userService.getUserById(request.getSenderId()), userService.getUserById(request.getReceiverId()));
         final var savedComment = commentRepository.save(comment);
 
         return commentMapper.toResponse(savedComment);

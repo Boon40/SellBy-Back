@@ -7,9 +7,9 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class CommentResponse {
-    private int id;
-    private int rating;
-    private String description;
-    private UserResponse sender;
-    private UserResponse receiver;
+    private final int id;
+    private final int rating;
+    private final String description;
+    private final UserResponse sender;
+    private final UserResponse receiver;
 }

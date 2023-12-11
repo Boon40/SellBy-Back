@@ -17,6 +17,6 @@ public class CategoryService {
 
     public Category getCategoryById(int id){
         Optional<Category> category = categoryRepository.findById((long) id);
-        return category.orElse(null);
+        return category.orElseThrow();
     }
 }

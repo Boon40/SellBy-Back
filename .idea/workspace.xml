@@ -6,8 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="b781f000-11d7-41bf-b672-4fab3868a055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/StateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/mapper/ProductPhotoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/mapper/ProductPhotoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/CategoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/CategoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/CommentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/CommentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/ProductPhotoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/ProductPhotoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/ProductResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/StateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/StateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/StateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/StateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sellby/sellby/service/CommentServiceDiffblueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sellby/sellby/service/ProductPhotoServiceDiffblueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sellby/sellby/service/ProductServiceDiffblueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sellby/sellby/service/UserServiceDiffblueTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +234,12 @@
       <workItem from="1700648838744" duration="1651000" />
       <workItem from="1700998388944" duration="5970000" />
       <workItem from="1701103364318" duration="13028000" />
+      <workItem from="1701253809064" duration="1729000" />
+      <workItem from="1701338659603" duration="597000" />
+      <workItem from="1701341774056" duration="39000" />
+      <workItem from="1701704564698" duration="677000" />
+      <workItem from="1702236739213" duration="2906000" />
+      <workItem from="1702251469626" duration="3008000" />
     </task>
     <servers />
   </component>

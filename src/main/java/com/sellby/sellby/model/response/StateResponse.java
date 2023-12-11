@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class StateResponse {
-    private int id;
-    private StateEnum state;
-    private String stateString;
+    private final int id;
+    private final StateEnum state;
+    private final String stateString;
 }

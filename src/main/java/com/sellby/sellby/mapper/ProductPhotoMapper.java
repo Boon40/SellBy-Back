@@ -1,5 +1,6 @@
 package com.sellby.sellby.mapper;
 
+import com.sellby.sellby.model.entity.Product;
 import com.sellby.sellby.model.entity.ProductPhoto;
 import com.sellby.sellby.model.entity.State;
 import com.sellby.sellby.model.request.ProductPhotoRequest;
@@ -14,7 +15,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class ProductPhotoMapper {
     private final ProductMapper productMapper;
-    private final ProductService productService;
     public ProductPhotoResponse toResponse(ProductPhoto productPhoto){
         return new ProductPhotoResponse(
                 productPhoto.getId(),
@@ -23,10 +23,10 @@ public class ProductPhotoMapper {
         );
     }
 
-    public ProductPhoto toEntity(ProductPhotoRequest request) throws Exception{
+    public ProductPhoto toEntity(ProductPhotoRequest request, Product product) throws Exception{
         return ProductPhoto.builder()
                 .path(request.getPath())
-                .product(productService.getProductEntityById(request.getProductId()))
+                .product(product)
                 .build();
     }
 }

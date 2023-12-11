@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class CategoryResponse {
-    private int id;
-    private CategoryEnum category;
-    private String categoryString;
+    private final int id;
+    private final CategoryEnum category;
+    private final String categoryString;
 }

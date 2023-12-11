@@ -1,6 +1,7 @@
 package com.sellby.sellby.mapper;
 
 import com.sellby.sellby.model.entity.Comment;
+import com.sellby.sellby.model.entity.User;
 import com.sellby.sellby.model.request.CommentRequest;
 import com.sellby.sellby.model.response.CommentResponse;
 import com.sellby.sellby.service.CommentService;
@@ -12,7 +13,6 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class CommentMapper {
     private final UserMapper userMapper;
-    private final UserService userService;
 
     public CommentResponse toResponse(Comment comment){
         return new CommentResponse(
@@ -24,12 +24,12 @@ public class CommentMapper {
         );
     }
 
-    public Comment toEntity(CommentRequest request){
+    public Comment toEntity(CommentRequest request, User sender, User receiver){
         return Comment.builder()
                 .rating(request.getRating())
                 .description(request.getDescription())
-                .sender(userService.getUserById(request.getSenderId()))
-                .receiver(userService.getUserById(request.getReceiverId()))
+                .sender(sender)
+                .receiver(receiver)
                 .build();
     }
 }

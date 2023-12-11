@@ -16,13 +16,13 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class ProductResponse {
-    private int id;
-    private String name;
-    private String description;
-    private float price;
-    private UserResponse seller;
-    private StateResponse state;
-    private CategoryResponse category;
-    private boolean isBuyerPayingDelivery;
-    private LocalDate createdDate;
+    private final int id;
+    private final String name;
+    private final String description;
+    private final float price;
+    private final UserResponse seller;
+    private final StateResponse state;
+    private final CategoryResponse category;
+    private final boolean isBuyerPayingDelivery;
+    private final LocalDate createdDate;
 }

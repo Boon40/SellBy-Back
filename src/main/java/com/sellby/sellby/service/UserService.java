@@ -33,7 +33,7 @@ public class UserService {
 
     public User getUserById(int id){
         Optional<User> user = userRepository.findById((long) id);
-        return user.orElse(null);
+        return user.orElseThrow();
     }
 
     public UserResponse registerUser(UserRequest request) throws Exception{

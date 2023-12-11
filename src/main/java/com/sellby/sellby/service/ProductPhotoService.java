@@ -27,6 +27,7 @@ public class ProductPhotoService {
     private final ProductPhotoRepository productPhotoRepository;
     private final ProductRepository productRepository;
     private final ProductPhotoMapper productPhotoMapper;
+    private final ProductService productService;
 
     public List<ProductPhotoResponse> getAllProductPhotos(){
         return((List<ProductPhoto>) productPhotoRepository.findAll())
@@ -44,11 +45,11 @@ public class ProductPhotoService {
 
     public ProductPhoto getProductPhotoById(int id){
         Optional<ProductPhoto> productPhoto = productPhotoRepository.findById((long) id);
-        return productPhoto.orElse(null);
+        return productPhoto.orElseThrow();
     }
 
     public ProductPhotoResponse addProductPhoto(ProductPhotoRequest request) throws Exception{
-        final var productPhoto = productPhotoMapper.toEntity(request);
+        final var productPhoto = productPhotoMapper.toEntity(request, productService.getProductEntityById(request.getProductId()));
         final var savedProductPhoto = productPhotoRepository.save(productPhoto);
 
         return productPhotoMapper.toResponse(savedProductPhoto);
@@ -56,18 +57,26 @@ public class ProductPhotoService {
 
     public void addProductPhoto(MultipartFile photo, int id) throws Exception{
         String uploadDir = "src/main/resources/static/images";
-        String originalFilename = photo.getOriginalFilename();
-        int lastIndex = originalFilename.lastIndexOf('.');
-        String type = "";
-        if (lastIndex >= 0 && lastIndex < originalFilename.length() - 1){
-            type = originalFilename.substring(lastIndex);
-        }
-        String date = java.time.LocalDateTime.now().toString().replace(":", "-").replace(".", "-");
-        String fileName = id + "-" + date + type;
-        Path path = Paths.get(uploadDir + "/" + fileName);
+        String type = getFileType(photo.getOriginalFilename());
+        String filename = generateUniqueFilename(id, type);
+        Path path = Paths.get(uploadDir + "/" + filename);
         Files.copy(photo.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
         ProductPhotoRequest product = new ProductPhotoRequest(path.toString(), id);
         this.addProductPhoto(product);
+    }
+
+    private String generateUniqueFilename(int id, String type){
+        String date = java.time.LocalDateTime.now().toString().replace(":", "-").replace(".", "-");
+        String filename = id + "-" + date + type;
+        return filename;
+    }
+    private String getFileType(String filename){
+        int lastIndex = filename.lastIndexOf('.');
+        String type = "";
+        if (lastIndex >= 0 && lastIndex < filename.length() - 1){
+            type = filename.substring(lastIndex);
+        }
+        return type;
     }
 
     public void deleteProductPhoto(int id){

@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class ProductPhotoResponse {
-    private int id;
-    private String path;
-    private ProductResponse product;
+    private final int id;
+    private final String path;
+    private final ProductResponse product;
 }

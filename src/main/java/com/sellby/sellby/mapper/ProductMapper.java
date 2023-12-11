@@ -19,9 +19,6 @@ public class ProductMapper {
     private final UserMapper userMapper;
     private final StateMapper stateMapper;
     private final CategoryMapper categoryMapper;
-    private final UserService userService;
-    private final StateService stateService;
-    private final CategoryService categoryService;
     public ProductResponse toResponse(Product product){
         return new ProductResponse(
             product.getId(),
@@ -36,14 +33,14 @@ public class ProductMapper {
         );
     }
 
-    public Product toEntity(ProductRequest request){
+    public Product toEntity(ProductRequest request, User seller, State state, Category category){
         return Product.builder()
                 .name(request.getName())
                 .description(request.getDescription())
                 .price(request.getPrice())
-                .seller(userService.getUserById(request.getSellerId()))
-                .state(stateService.getStateEntityById(request.getStateId()))
-                .category(categoryService.getCategoryById(request.getCategoryId()))
+                .seller(seller)
+                .state(state)
+                .category(category)
                 .isBuyerPayingDelivery(request.GetIsBuyerPayingDelivery())
                 .createdDate(LocalDate.now())
                 .build();

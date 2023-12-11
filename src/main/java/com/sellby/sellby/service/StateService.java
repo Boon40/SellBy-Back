@@ -29,10 +29,11 @@ public class StateService {
                 .map(stateMapper::toResponse)
                 .toList();
     }
-    public StateResponse getStateById(int id){
+    public State getStateById(int id){
         Optional<State> state = stateRepository.findById((long) id);
-        return stateMapper.toResponse(state.orElseThrow());
+        return state.orElseThrow();
     }
+
     public State getStateEntityById(int id){
         Optional<State> state = stateRepository.findById((long) id);
         return state.orElse(null);

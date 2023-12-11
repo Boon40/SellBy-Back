@@ -12,12 +12,12 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 public class UserResponse {
-    private int id;
-    private String email;
-    private String number;
-    private String first_name;
-    private String last_name;
-    private String country;
-    private String city;
-    private LocalDate createdDate;
+    private final int id;
+    private final String email;
+    private final String number;
+    private final String first_name;
+    private final String last_name;
+    private final String country;
+    private final String city;
+    private final LocalDate createdDate;
 }
