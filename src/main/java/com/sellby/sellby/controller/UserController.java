@@ -25,6 +25,14 @@ public class UserController {
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<UserResponse> getUserById(@PathVariable String id) {
+        try {
+            return ResponseEntity.ok(userService.getUserResponseById(Integer.valueOf(id)));
+        } catch (Exception e){
+            return ResponseEntity.badRequest().build();
+        }
+    }
 
     @PostMapping
     public ResponseEntity<UserResponse> registerUser(

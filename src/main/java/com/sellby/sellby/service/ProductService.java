@@ -3,6 +3,7 @@ package com.sellby.sellby.service;
 import com.sellby.sellby.mapper.ProductMapper;
 import com.sellby.sellby.model.entity.Comment;
 import com.sellby.sellby.model.entity.Product;
+import com.sellby.sellby.model.entity.User;
 import com.sellby.sellby.model.request.ProductRequest;
 import com.sellby.sellby.model.response.ProductResponse;
 import com.sellby.sellby.repository.ProductRepository;
@@ -25,6 +26,13 @@ public class ProductService {
 
     public List<ProductResponse> getAllProducts(){
         return((List<Product>) productRepository.findAll())
+                .stream()
+                .map(productMapper::toResponse)
+                .toList();
+    }
+
+    public List<ProductResponse> getProductsByUserId(int id){
+        return((List<Product>) productRepository.getProductsByUser(userService.getUserById(id)))
                 .stream()
                 .map(productMapper::toResponse)
                 .toList();

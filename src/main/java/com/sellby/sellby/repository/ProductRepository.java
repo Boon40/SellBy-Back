@@ -1,5 +1,6 @@
 package com.sellby.sellby.repository;
 
+import com.sellby.sellby.model.entity.Comment;
 import com.sellby.sellby.model.entity.Product;
 import com.sellby.sellby.model.entity.ProductPhoto;
 import com.sellby.sellby.model.entity.User;
@@ -11,4 +12,6 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
+    @Query("SELECT p FROM Product p WHERE p.seller = ?1")
+    List<Product> getProductsByUser(User user);
 }

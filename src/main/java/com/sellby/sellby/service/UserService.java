@@ -31,6 +31,11 @@ public class UserService {
                 .toList();
     }
 
+    public UserResponse getUserResponseById(int id) throws Exception{
+        Optional<User> user = userRepository.findById((long) id);
+        return userMapper.toResponse(user.orElseThrow());
+    }
+
     public User getUserById(int id){
         Optional<User> user = userRepository.findById((long) id);
         return user.orElseThrow();
