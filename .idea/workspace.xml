@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b781f000-11d7-41bf-b672-4fab3868a055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,37 +82,7 @@
       <recent name="C:\Users\mm\Desktop\sem3\SellBy\SellBy\src\main\resources\static\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SellByApplication">
-    <configuration name="CommentServiceDiffblueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SellBy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sellby.sellby.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.CommentServiceDiffblueTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductPhotoServiceDiffblueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SellBy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sellby.sellby.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.ProductPhotoServiceDiffblueTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.UserServiceDiffblueTest.testRegisterUser">
     <configuration name="UserServiceDiffblueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SellBy" />
       <extension name="coverage">
@@ -133,6 +98,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserServiceDiffblueTest.testGetAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SellBy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sellby.sellby.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.UserServiceDiffblueTest" />
+      <option name="METHOD_NAME" value="testGetAllUsers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceDiffblueTest.testGetUserResponseById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SellBy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sellby.sellby.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.UserServiceDiffblueTest" />
+      <option name="METHOD_NAME" value="testGetUserResponseById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceDiffblueTest.testRegisterUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SellBy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sellby.sellby.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.UserServiceDiffblueTest" />
+      <option name="METHOD_NAME" value="testRegisterUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SellByApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="SellBy" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sellby.sellby.SellByApplication" />
@@ -140,31 +153,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Write tests for class CommentService" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+    <configuration name="Write tests for class UserService" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
       <module name="SellBy" />
-      <settings run-config-name="Write tests for class CommentService" include-system-env-vars="true">
+      <settings run-config-name="Write tests for class UserService" include-system-env-vars="true">
         <jvm-args />
         <selection-scope>class</selection-scope>
-        <selected-element key="com.sellby.sellby.service.CommentService" />
-      </settings>
-      <method v="2" />
-    </configuration>
-    <configuration name="Write tests for class ProductPhotoService" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
-      <module name="SellBy" />
-      <settings run-config-name="Write tests for class ProductPhotoService" include-system-env-vars="true">
-        <jvm-args />
-        <selection-scope>class</selection-scope>
-        <selected-element key="com.sellby.sellby.service.ProductPhotoService" />
+        <selected-element key="com.sellby.sellby.service.UserService" />
       </settings>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceDiffblueTest.testRegisterUser" />
         <item itemvalue="JUnit.UserServiceDiffblueTest" />
-        <item itemvalue="JUnit.ProductPhotoServiceDiffblueTest" />
-        <item itemvalue="JUnit.CommentServiceDiffblueTest" />
-        <item itemvalue="Diffblue Cover.Write tests for class CommentService" />
-        <item itemvalue="Diffblue Cover.Write tests for class ProductPhotoService" />
+        <item itemvalue="JUnit.UserServiceDiffblueTest.testGetUserResponseById" />
+        <item itemvalue="JUnit.UserServiceDiffblueTest.testGetAllUsers" />
+        <item itemvalue="Diffblue Cover.Write tests for class UserService" />
       </list>
     </recent_temporary>
   </component>
@@ -225,6 +229,9 @@
       <workItem from="1701704564698" duration="677000" />
       <workItem from="1702236739213" duration="2906000" />
       <workItem from="1702251469626" duration="9155000" />
+      <workItem from="1702283442652" duration="744000" />
+      <workItem from="1702287541816" duration="113000" />
+      <workItem from="1702916520565" duration="298000" />
     </task>
     <servers />
   </component>
