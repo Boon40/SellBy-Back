@@ -82,7 +82,7 @@
       <recent name="C:\Users\mm\Desktop\sem3\SellBy\SellBy\src\main\resources\static\images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceDiffblueTest.testRegisterUser">
+  <component name="RunManager" selected="Diffblue Cover.Write tests for class ProductPhotoService">
     <configuration name="UserServiceDiffblueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SellBy" />
       <extension name="coverage">
@@ -94,22 +94,6 @@
       <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
       <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.UserServiceDiffblueTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceDiffblueTest.testGetAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SellBy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sellby.sellby.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.UserServiceDiffblueTest" />
-      <option name="METHOD_NAME" value="testGetAllUsers" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,22 +137,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Write tests for class UserService" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+    <configuration name="Write tests for class ProductPhotoService" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
       <module name="SellBy" />
-      <settings run-config-name="Write tests for class UserService" include-system-env-vars="true">
+      <settings run-config-name="Write tests for class ProductPhotoService" include-system-env-vars="true">
         <jvm-args />
         <selection-scope>class</selection-scope>
-        <selected-element key="com.sellby.sellby.service.UserService" />
+        <selected-element key="com.sellby.sellby.service.ProductPhotoService" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Write tests for class ProductService" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="SellBy" />
+      <settings run-config-name="Write tests for class ProductService" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>class</selection-scope>
+        <selected-element key="com.sellby.sellby.service.ProductService" />
       </settings>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Diffblue Cover.Write tests for class ProductPhotoService" />
+        <item itemvalue="Diffblue Cover.Write tests for class ProductService" />
         <item itemvalue="JUnit.UserServiceDiffblueTest.testRegisterUser" />
         <item itemvalue="JUnit.UserServiceDiffblueTest" />
         <item itemvalue="JUnit.UserServiceDiffblueTest.testGetUserResponseById" />
-        <item itemvalue="JUnit.UserServiceDiffblueTest.testGetAllUsers" />
-        <item itemvalue="Diffblue Cover.Write tests for class UserService" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +224,7 @@
       <workItem from="1702251469626" duration="9155000" />
       <workItem from="1702283442652" duration="744000" />
       <workItem from="1702287541816" duration="113000" />
-      <workItem from="1702916520565" duration="298000" />
+      <workItem from="1702916520565" duration="1074000" />
     </task>
     <servers />
   </component>
