@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b781f000-11d7-41bf-b672-4fab3868a055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/cssandjs/mainPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles/cssandjs/loginPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles/cssandjs/mainPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles/cssandjs/productPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles/cssandjs/registerPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerPage.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +78,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -82,7 +98,7 @@
       <recent name="C:\Users\mm\Desktop\sem3\SellBy\SellBy\src\main\resources\static\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Diffblue Cover.Write tests for class ProductPhotoService">
+  <component name="RunManager" selected="Spring Boot.SellByApplication">
     <configuration name="UserServiceDiffblueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SellBy" />
       <extension name="coverage">
@@ -94,22 +110,6 @@
       <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
       <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.UserServiceDiffblueTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceDiffblueTest.testGetUserResponseById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SellBy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sellby.sellby.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sellby.sellby.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.UserServiceDiffblueTest" />
-      <option name="METHOD_NAME" value="testGetUserResponseById" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,6 +126,14 @@
       <option name="MAIN_CLASS_NAME" value="com.sellby.sellby.service.UserServiceDiffblueTest" />
       <option name="METHOD_NAME" value="testRegisterUser" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in SellBy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SellBy" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.java in SellBy" />
         <item itemvalue="Diffblue Cover.Write tests for class ProductPhotoService" />
         <item itemvalue="Diffblue Cover.Write tests for class ProductService" />
         <item itemvalue="JUnit.UserServiceDiffblueTest.testRegisterUser" />
         <item itemvalue="JUnit.UserServiceDiffblueTest" />
-        <item itemvalue="JUnit.UserServiceDiffblueTest.testGetUserResponseById" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +232,9 @@
       <workItem from="1702251469626" duration="9155000" />
       <workItem from="1702283442652" duration="744000" />
       <workItem from="1702287541816" duration="113000" />
-      <workItem from="1702916520565" duration="1074000" />
+      <workItem from="1702916520565" duration="1300000" />
+      <workItem from="1702918081283" duration="1008000" />
+      <workItem from="1704370466196" duration="5196000" />
     </task>
     <servers />
   </component>

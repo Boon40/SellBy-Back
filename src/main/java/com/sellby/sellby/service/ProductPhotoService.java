@@ -48,6 +48,11 @@ public class ProductPhotoService {
         return productPhoto.orElseThrow();
     }
 
+    public ProductPhotoResponse getProductPhotoResponseById(int id) throws Exception{
+        Optional<ProductPhoto> productPhoto = productPhotoRepository.findById((long) id);
+        return productPhotoMapper.toResponse(productPhoto.orElseThrow());
+    }
+
     public ProductPhotoResponse addProductPhoto(ProductPhotoRequest request) throws Exception{
         final var productPhoto = productPhotoMapper.toEntity(request, productService.getProductEntityById(request.getProductId()));
         final var savedProductPhoto = productPhotoRepository.save(productPhoto);

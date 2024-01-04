@@ -26,6 +26,11 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProductsByUserId(Integer.valueOf(id)));
     }
 
+    @GetMapping("category/{category}")
+    public ResponseEntity<List<ProductResponse>> getProductsByCategory(@PathVariable String category) {
+        return ResponseEntity.ok(productService.getProductsByCategory(category));
+    }
+
     @PostMapping
     public ResponseEntity<ProductResponse> addProduct(
             @RequestBody @Valid ProductRequest request

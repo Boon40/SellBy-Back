@@ -6,6 +6,7 @@ import com.sellby.sellby.model.response.ProductPhotoResponse;
 import com.sellby.sellby.model.response.ProductResponse;
 import com.sellby.sellby.service.ProductPhotoService;
 import com.sellby.sellby.service.ProductService;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -35,19 +36,18 @@ public class ProductPhotoController {
     }
 
     @PostMapping
-    public String addProductPhotos(
+    public ResponseEntity<ProductPhotoResponse> addProductPhotos(
             @RequestParam("image") MultipartFile photo,
             @RequestParam("id") int id
     ) {
         try {
             if (photo.isEmpty()){
-                return "No photos selected";
+                return ResponseEntity.badRequest().build();
             }
             productPhotoService.addProductPhoto(photo, id);
-            return "Photo uploaded successfully";
+            return ResponseEntity.ok(productPhotoService.getProductPhotoResponseById(Integer.valueOf(id)));
         }catch (Exception e){
-            e.printStackTrace();
-            return "Error uploading the photo";
+            return ResponseEntity.badRequest().build();
         }
     }
 
