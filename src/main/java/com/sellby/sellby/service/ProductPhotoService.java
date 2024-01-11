@@ -13,11 +13,18 @@ import com.sellby.sellby.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import javax.imageio.ImageIO;
 
+
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -43,6 +50,19 @@ public class ProductPhotoService {
                 .toList();
     }
 
+    public List<byte[]> getProductPhotosAsBytes(int id) throws Exception{
+        List<ProductPhoto> photos = productPhotoRepository.getProductPhotos(productRepository.findById((long) id).orElseThrow())
+                .stream()
+                .toList();
+        List<byte[]> bytesList = new ArrayList<>();
+        for (ProductPhoto photo : photos){
+            Path path = Paths.get(photo.getPath());
+            bytesList.add(Files.readAllBytes(path));
+            System.out.println(Files.readAllBytes(path).length);
+        }
+        return bytesList;
+    }
+
     public ProductPhoto getProductPhotoById(int id){
         Optional<ProductPhoto> productPhoto = productPhotoRepository.findById((long) id);
         return productPhoto.orElseThrow();
@@ -60,14 +80,15 @@ public class ProductPhotoService {
         return productPhotoMapper.toResponse(savedProductPhoto);
     }
 
-    public void addProductPhoto(MultipartFile photo, int id) throws Exception{
+    public int addProductPhoto(MultipartFile photo, int id) throws Exception{
         String uploadDir = "src/main/resources/static/images";
         String type = getFileType(photo.getOriginalFilename());
         String filename = generateUniqueFilename(id, type);
         Path path = Paths.get(uploadDir + "/" + filename);
         Files.copy(photo.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
         ProductPhotoRequest product = new ProductPhotoRequest(path.toString(), id);
-        this.addProductPhoto(product);
+        ProductPhotoResponse response = this.addProductPhoto(product);
+        return response.getId();
     }
 
     private String generateUniqueFilename(int id, String type){

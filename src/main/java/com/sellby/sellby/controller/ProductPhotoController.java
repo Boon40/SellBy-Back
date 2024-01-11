@@ -31,8 +31,14 @@ public class ProductPhotoController {
     }
 
     @GetMapping("/product/{id}")
-    public ResponseEntity<List<ProductPhotoResponse>> getProductPhotos(@PathVariable String id) {
-        return ResponseEntity.ok(productPhotoService.getProductPhotos(Integer.valueOf(id)));
+    public ResponseEntity<List<byte[]>> getProductPhotos(@PathVariable String id) {
+        try{
+            System.out.println("sending images");
+            return ResponseEntity.ok(productPhotoService.getProductPhotosAsBytes(Integer.valueOf(id)));
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().build();
+        }
     }
 
     @PostMapping
@@ -42,10 +48,11 @@ public class ProductPhotoController {
     ) {
         try {
             if (photo.isEmpty()){
+                System.out.println("empty");
                 return ResponseEntity.badRequest().build();
             }
-            productPhotoService.addProductPhoto(photo, id);
-            return ResponseEntity.ok(productPhotoService.getProductPhotoResponseById(Integer.valueOf(id)));
+            int photoId = productPhotoService.addProductPhoto(photo, id);
+            return ResponseEntity.ok(productPhotoService.getProductPhotoResponseById(Integer.valueOf(photoId)));
         }catch (Exception e){
             return ResponseEntity.badRequest().build();
         }

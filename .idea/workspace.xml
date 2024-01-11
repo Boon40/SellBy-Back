@@ -9,18 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b781f000-11d7-41bf-b672-4fab3868a055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/ProductPhotoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/ProductPhotoResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/cssandjs/mainPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles/cssandjs/loginPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles/cssandjs/mainPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles/cssandjs/productPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles/cssandjs/registerPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerPage.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,6 +226,8 @@
       <workItem from="1702916520565" duration="1300000" />
       <workItem from="1702918081283" duration="1008000" />
       <workItem from="1704370466196" duration="5196000" />
+      <workItem from="1704387932250" duration="786000" />
+      <workItem from="1704960896738" duration="13498000" />
     </task>
     <servers />
   </component>
