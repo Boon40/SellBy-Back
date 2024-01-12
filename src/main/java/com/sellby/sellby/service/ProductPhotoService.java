@@ -58,7 +58,6 @@ public class ProductPhotoService {
         for (ProductPhoto photo : photos){
             Path path = Paths.get(photo.getPath());
             bytesList.add(Files.readAllBytes(path));
-            System.out.println(Files.readAllBytes(path).length);
         }
         return bytesList;
     }

@@ -57,7 +57,6 @@ public class ProductService {
             case "Travel": id = 14; break;
             case "VideoGamesAndConsoles": id = 15; break;
         }
-        System.out.println("id: " + id);
         return ((List<Product>) productRepository.getProductsByCategory(categoryService.getCategoryById(id)))
                 .stream()
                 .map(productMapper::toResponse)

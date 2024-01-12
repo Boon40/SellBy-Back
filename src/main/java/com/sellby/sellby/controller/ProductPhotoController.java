@@ -33,7 +33,6 @@ public class ProductPhotoController {
     @GetMapping("/product/{id}")
     public ResponseEntity<List<byte[]>> getProductPhotos(@PathVariable String id) {
         try{
-            System.out.println("sending images");
             return ResponseEntity.ok(productPhotoService.getProductPhotosAsBytes(Integer.valueOf(id)));
         }
         catch (Exception e){
@@ -48,7 +47,6 @@ public class ProductPhotoController {
     ) {
         try {
             if (photo.isEmpty()){
-                System.out.println("empty");
                 return ResponseEntity.badRequest().build();
             }
             int photoId = productPhotoService.addProductPhoto(photo, id);

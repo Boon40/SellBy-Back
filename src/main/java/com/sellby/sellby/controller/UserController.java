@@ -33,17 +33,4 @@ public class UserController {
             return ResponseEntity.badRequest().build();
         }
     }
-
-    @PostMapping
-    public ResponseEntity<UserResponse> registerUser(
-            @RequestBody @Valid UserRequest request
-    ) {
-        try {
-            return ResponseEntity.ok(userService.registerUser(request));
-        } catch (Exception e){
-            //TODO send error to front end and display it
-            System.out.println(e.getMessage());
-            return null;
-        }
-    }
 }

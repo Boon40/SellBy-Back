@@ -9,9 +9,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b781f000-11d7-41bf-b672-4fab3868a055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/ProductPhotoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/response/ProductPhotoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,11 +25,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="Kotlin Class" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -80,6 +84,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sellby.sellby.config" />
+      <recent name="com.sellby.sellby.model.entity" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mm\Desktop\sem3\SellBy\SellBy\src" />
       <recent name="C:\Users\mm\Desktop\sem3\SellBy\SellBy\src\main\resources\static" />
@@ -227,7 +235,8 @@
       <workItem from="1702918081283" duration="1008000" />
       <workItem from="1704370466196" duration="5196000" />
       <workItem from="1704387932250" duration="786000" />
-      <workItem from="1704960896738" duration="13498000" />
+      <workItem from="1704960896738" duration="13586000" />
+      <workItem from="1705061293853" duration="12911000" />
     </task>
     <servers />
   </component>
