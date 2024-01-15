@@ -27,9 +27,6 @@ public class RegisterRequest {
     @NotBlank(message = "Last name is required")
     private String last_name;
 
-    @NotBlank(message = "Password hash is required")
-    private String password_hash;
-
     @NotBlank(message = "Country is required")
     private String country;
 

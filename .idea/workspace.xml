@@ -9,13 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b781f000-11d7-41bf-b672-4fab3868a055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/ProductPhotoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductPhotoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/request/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/model/request/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sellby/sellby/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +235,10 @@
       <workItem from="1704370466196" duration="5196000" />
       <workItem from="1704387932250" duration="786000" />
       <workItem from="1704960896738" duration="13586000" />
-      <workItem from="1705061293853" duration="12911000" />
+      <workItem from="1705061293853" duration="13194000" />
+      <workItem from="1705238772593" duration="1078000" />
+      <workItem from="1705308234173" duration="3155000" />
+      <workItem from="1705326773058" duration="12904000" />
     </task>
     <servers />
   </component>

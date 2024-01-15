@@ -20,8 +20,12 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
-    public AuthenticationResponse register(RegisterRequest request) {
+    public AuthenticationResponse register(RegisterRequest request) throws Exception{
         User user = registerMapper.toEntity(request);
+        User existingUser = userRepository.findUserByEmail(user.getEmail());
+        if (existingUser != null){
+            throw new Exception ("Email already in use");
+        }
         userRepository.save(user);
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse
@@ -30,9 +34,12 @@ public class AuthenticationService {
                 .build();
     }
 
-    public AuthenticationResponse authenticate(AuthenticationRequest request) {
+    public AuthenticationResponse authenticate(AuthenticationRequest request) throws Exception{
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
-        var user = userRepository.findByEmail(request.getEmail()).orElseThrow();
+        User user = userRepository.findUserByEmail(request.getEmail());
+        if (user == null){
+            throw new Exception("Wrong credentials!");
+        }
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse
                 .builder()

@@ -33,4 +33,13 @@ public class UserController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @GetMapping("/email/{email}")
+    public ResponseEntity<UserResponse> getUserByEmail(@PathVariable String email) {
+        try {
+            return ResponseEntity.ok(userService.getUserByEmail(email));
+        } catch (Exception e){
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

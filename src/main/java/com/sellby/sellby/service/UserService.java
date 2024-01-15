@@ -41,6 +41,14 @@ public class UserService {
         return user.orElseThrow();
     }
 
+    public UserResponse getUserByEmail(String email) throws Exception{
+        User user = userRepository.findUserByEmail(email);
+        if (user != null){
+            return userMapper.toResponse(user);
+        }
+        throw new Exception("User not found");
+    }
+
     public UserResponse registerUser(UserRequest request) throws Exception{
         if (userRepository.findUserByEmail(request.getEmail()) != null){
             System.out.println("throwing exception");
