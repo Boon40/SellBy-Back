@@ -1,5 +1,7 @@
-FROM openjdk:11-jre-slim
+FROM maven:3.9.6-eclipse-temurin-17
 WORKDIR /app
-COPY target/your-spring-boot-app.jar /app/app.jar
+COPY . .
+RUN mvn dependency:go-offline
+RUN mvn package -DskipTests
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "target/SellBy-0.0.1-SNAPSHOT.jar"]
